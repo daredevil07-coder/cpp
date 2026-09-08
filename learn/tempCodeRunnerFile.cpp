@@ -1,0 +1,3 @@
+int getmarks(){
+    //     return marks;
+    // }
