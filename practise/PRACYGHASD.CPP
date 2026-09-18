@@ -1,30 +1,42 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-class student{
+
+class bankbalance{
     private:
-    string name;
-    int marks;
-
+    int balance;
     public:
-    void setdata(string name,int marks){
-        this->name = name;
-        this->marks = marks;
+    bankbalance(int startingbalance){
+        if (startingbalance>=0){
+            balance= startingbalance;
+        }else {
+            balance = 0;
+        }
     }
-
-
-    void addmarks(int extra){
-        marks = marks+extra 
+    void deposit(int amount){
+        if (amount>=0){
+            balance= balance+amount;
+        }
     }
-    int getmarks();
-    void display();
-
+    void withdraw(int amount){
+        if (amount >0 && amount <=balance){
+            balance = balance- amount;
+        }
+    }
+    void display(){
+        cout << "balance"<< balance<<endl;
+    }
 
 };
 
-int main(){
-    student s1;
-    student s2;
 
+int main() {
+    bankbalance account(10000);
+
+    account.deposit(2000);
+    account.withdraw(3000);
+
+    account.display();
+
+    return 0;
 }
