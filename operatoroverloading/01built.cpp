@@ -38,3 +38,10 @@ int main(){
     ++c1;
     cout << c1.value<<endl;
 }
+
+// prefix= 
+// 1.operator++()
+// 2.increment before returning the value 
+// 3.return the updated object 
+// 4.return type counter
+// overloading the decremnt operator delete[]prefix overloading of unary operator--
